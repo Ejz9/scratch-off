@@ -1380,6 +1380,7 @@ version = "0.1.0"
 dependencies = [
  "clap",
  "color-eyre",
+ "crossterm",
  "itertools 0.15.0",
  "ratatui",
  "rayon",
