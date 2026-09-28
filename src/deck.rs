@@ -24,11 +24,13 @@ impl Deck {
     fn shuffle(mut self) {
         self.cards.shuffle(&mut rng());
     }
-    fn new(size_mult: Option<u8>) {
-        let num_decks = size_mult.unwrap_or(1);
+    fn new() -> Self {
+        Self::default()
+    }
+    fn with_decks(num_decks: u8) {
         let mut total_deck: Vec<Card> = vec![];
         for _ in 0..num_decks {
-            total_deck.append(&mut Deck::default().cards);
+            total_deck.append(&mut Self::default().cards);
         }
     }
 }
