@@ -10,13 +10,13 @@ enum Suit {
 }
 
 #[derive(Debug)]
-struct Card {
+pub struct Card {
     rank: char,
     suit: Suit,
 }
 
 #[derive(Debug)]
-struct Deck {
+pub struct Deck {
     cards: Vec<Card>,
 }
 
